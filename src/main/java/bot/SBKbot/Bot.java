@@ -51,6 +51,7 @@ public class Bot extends TelegramLongPollingBot{
 	case("inf"):
 		sendMsgInf(update.getMessage().getChatId().toString(), message);
 		break;
+	
 	}
     }
 /**
@@ -76,6 +77,17 @@ public class Bot extends TelegramLongPollingBot{
         sendMessage.enableMarkdown(true);
         sendMessage.setChatId(chatId);
         sendMessage.setText("AGHTUNGH @ZhekaRoyzman @TolyaOdessit");
+        try {
+            sendMessage(sendMessage);
+        } catch (TelegramApiException e) {
+        	e.printStackTrace();
+        }
+    }
+    public synchronized void sendMsgFlood(String chatId, String s) {
+        SendMessage sendMessage = new SendMessage();
+        sendMessage.enableMarkdown(true);
+        sendMessage.setChatId(chatId);
+        sendMessage.setText("Думаете я вас не переиграю,что я вас не уничтожу?я вас уничтожу.");
         try {
             sendMessage(sendMessage);
         } catch (TelegramApiException e) {
