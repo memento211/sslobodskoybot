@@ -1,1 +1,1 @@
-worker: sh target/bin/SBKbot-0.0.1-SNAPSHOT.jar
+web: sh target/bin/workerBot
