@@ -36,7 +36,7 @@
                     <programs>
                         <program>
                             <mainClass>src.main.java.bot.SBKbot</mainClass>
-                            <name>SBKbot-0.0.1-SNAPSHOT.jar</name>
+                            <name>workerBot</name>
                         </program>
                     </programs> 
                 </configuration>
